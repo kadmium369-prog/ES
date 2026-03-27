@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  
+  --color-earth-cream: #f5f5f0;
+  --color-earth-olive: #5a5a40;
+  --color-earth-ink: #1a1a1a;
+  --color-earth-clay: #a67c52;
+}
+
+@layer base {
+  body {
+    @apply bg-earth-cream text-earth-ink font-sans;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.pill-button {
+  @apply px-6 py-2 rounded-full transition-all duration-300;
+}
